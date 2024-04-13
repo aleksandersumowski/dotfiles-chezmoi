@@ -79,6 +79,7 @@ plugins=(
         zsh-vi-mode
         zsh-autosuggestions
         gcloud
+        chezmoi
         # brew
         # last-working-dir
         # docker
@@ -168,4 +169,3 @@ eval "$($BREW_PREFIX/mise activate zsh)"
 bindkey '^g' fzf-git-checkout
 bindkey '^b' fzf-git-branch
 bindkey '^x' forward-word
-export DIRENV_LOG_FORMAT=

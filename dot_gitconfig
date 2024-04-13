@@ -1,0 +1,73 @@
+[user]
+  name = Aleksander Sumowski
+  email = github@sumowski.pl
+
+[core]
+  editor = vim
+  excludesfile = /Users/aleksandersumowski/.gitignore_global
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[color]
+  ui = true
+[push]
+  default = simple
+	autoSetupRemote = true
+[pull]
+  ff = only
+  rebase = true
+[apply]
+  whitespace = strip
+[pager]
+  color = true
+[status]
+  color = auto
+[diff]
+  indentHeuristic = true
+  tool = bc
+[difftool]
+  prompt = false
+[difftool "vimdiff"]
+  trustExitCode = true
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+[merge]
+  tool = bc
+[mergetool "vimdiff"]
+  cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+  conflictStyle = zdiff3
+[mergetool "bc"]
+  trustExitCode = true
+[alias]
+  praise = blame
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[delta]
+  features = regular-usage decorations
+  whitespace-error-style = 22 reverse
+  wrap-max-lines=unlimited
+  theme = "Nord"
+
+[delta "decorations"]
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
+
+[delta "regular-usage"]
+  line-numbers = true
+  side-by-side = true
+
+[delta "copy"]
+  line-numbers = false
+  side-by-side = false
+
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+[init]
+	defaultBranch = main
+
+[includeIf "gitdir:~/work/"]
+  path = ~/work/gitconfig

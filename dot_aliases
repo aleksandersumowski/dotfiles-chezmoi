@@ -1,0 +1,21 @@
+#let there be colour
+alias dir='dir --color=auto'
+alias grep='grep --color=auto'
+alias gup='git pull --rebase --autostash'
+alias gupm='git pull --rebase --autostash origin master && git rebase --autostash master'
+
+alias v='nvim'
+alias vim='nvim'
+
+alias lein="rlwrap lein"
+
+alias pp='python -mjson.tool'
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias top="sudo htop"
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+alias more='bat --theme=Nord'
+alias ls='eza'
+alias kg='kubectl get'
+alias kgpy='kubectl get pods -o yaml'
+alias e='emacsclient --create-frame --alternate-editor=""'

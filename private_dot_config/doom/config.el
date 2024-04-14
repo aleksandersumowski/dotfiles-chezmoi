@@ -75,59 +75,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-
-(defun treemacs-project-dir ()
-  "Open NeoTree using the git root."
-  (interactive)
-  (let ((project-dir (projectile-project-root))
-        (file-name (buffer-file-name)))
-    (if project-dir
-        (progn
-          (treemacs-add-project-to-workspace project-dir)
-          (treemacs)
-          (let ((project (treemacs--find-project-for-path project-dir)))
-            (treemacs-goto-file-node file-name))
-      (message "Could not find git project root.")))))
-
-;; (defun neotree-project-dir ()
-;;   "Open NeoTree using the git root."
-;;   (interactive)
-;;   (let ((project-dir (projectile-project-root))
-;;         (file-name (buffer-file-name)))
-;;     (neotree-toggle)
-;;     (if project-dir
-;;         (if (neo-global--window-exists-p)
-;;             (progn
-;;               (neotree-dir project-dir)
-;;               (neotree-find file-name)))
-;;       (message "Could not find git project root."))))
-
-;; (define-key evil-normal-state-map "<leader>-e" 'neotree-project-dir)
-;; (message (buffer-file-name))
-
-(setq elfeed-feeds
-      '(("http://nullprogram.com/feed/" blog emacs)
-        "http://www.50ply.com/atom.xml"  ; no autotagging
-        ("http://nedroid.com/feed/" webcomic)))
-
-
-(evil-define-key '(normal motion) evil-snipe-local-mode-map "s" nil)
-
-(evil-define-command evil-sandwich (char)
-  (interactive (evil-surround-input-char))
-  (call-interactively
-   (pcase char
-     (?a #'evil-surround-region)
-     (?r #'evil-surround-change)
-     (?d #'evil-surround-delete))))
-
-(evil-define-key 'normal evil-surround-mode-map "s" 'evil-sandwich)
-
-
-(defun my/toggle-maximize ()
-  (interactive)
-  (if  (> (count-windows) 1)
-      (delete-other-windows)
-    ;; (tab-bar-history-back)
-   (winner-undo)
-    ))
+ ;; (define-key evil-normal-state-map "<leader>-e" 'treemacs)
+(map! :map evil-normal-state-map
+      :leader
+      :n "e"
+      #'treemacs-find-file
+      )

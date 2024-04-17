@@ -1,2 +1,3 @@
 [tools]
 chezmoi = "latest"
+java = "temurin-21"

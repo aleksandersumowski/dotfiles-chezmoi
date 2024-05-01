@@ -71,3 +71,6 @@
 
 [includeIf "gitdir:~/work/"]
   path = ~/work/gitconfig
+
+[log]
+	date = iso-local

@@ -1,5 +1,3 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCommunity: import any community modules here
 -- We import this file in `lazy_setup.lua` before the `plugins/` folder.
 -- This guarantees that the specs are processed before any user plugins.
@@ -9,6 +7,7 @@ return {
 	"AstroNvim/astrocommunity",
 	{ import = "astrocommunity.pack.lua" },
 	{ import = "astrocommunity.pack.clojure" },
+	{ import = "astrocommunity.pack.helm" },
 	{ import = "astrocommunity.pack.terraform" },
 	{ import = "astrocommunity.project.nvim-spectre" },
 	{ import = "astrocommunity.motion.mini-surround" },

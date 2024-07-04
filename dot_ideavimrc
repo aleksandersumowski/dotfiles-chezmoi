@@ -124,3 +124,10 @@ nnoremap <leader>se :action ShowErrorDescription<cr>
 " Misc
 nnoremap <leader>vr :source ~/.ideavimrc<CR>
 noremap <leader>vr :source ~/.ideavimrc<CR>
+
+
+" AstroNvim mappings
+nnoremap <leader>ls :Action FileStructurePopup<CR>
+nnoremap <leader>lr :action RenameElement<CR>
+nnoremap crn        :action RenameElement<CR>
+nnoremap <leader>fo :action RecentFiles<CR>

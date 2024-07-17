@@ -1,3 +1,5 @@
 [tools]
 chezmoi = "latest"
 java = "temurin-21"
+kubectl = "1.26"
+kubectx = "latest"

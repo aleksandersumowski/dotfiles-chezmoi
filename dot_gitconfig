@@ -1,6 +1,7 @@
 [user]
   name = Aleksander Sumowski
   email = github@sumowski.pl
+  user = aleksandersumowski
 
 [core]
   editor = vim

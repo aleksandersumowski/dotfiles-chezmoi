@@ -1,5 +1,7 @@
 [tools]
 chezmoi = "latest"
 java = "temurin-21"
+node = "20"
+go = "latest"
 kubectl = "1.26"
 kubectx = "latest"

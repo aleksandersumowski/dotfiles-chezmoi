@@ -44,7 +44,7 @@ zmodule ohmyzsh/ohmyzsh --root plugins/kubectl
 # zmodule ohmyzsh/ohmyzsh --root plugins/docker
 zmodule ohmyzsh/ohmyzsh --root plugins/gcloud
 zmodule kiesman99/zim-zoxide
-# zmodule romkatv/powerlevel10k --use degit
+zmodule romkatv/powerlevel10k --use degit
 zmodule jeffreytse/zsh-vi-mode
 zmodule joke/zim-chezmoi
 

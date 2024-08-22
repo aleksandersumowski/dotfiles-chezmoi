@@ -40,7 +40,7 @@ vmap <leader>cc :action CommentByLineComment<CR>
 vmap <leader>cb :action CommentByBlockComment<CR>
 
 " Menus
-nnoremap <leader>m :action ActivateProjectToolWindow<CR>
+nnoremap <leader>e :action ActivateProjectToolWindow<CR>
 nnoremap <leader>zz :action ToggleZenMode<CR>
 
 
@@ -52,6 +52,7 @@ nnoremap <leader>rf :action RenameFile<CR>
 nnoremap <leader>ri :action Inline<CR>
 nnoremap <leader>rv :action IntroduceVariable<CR>
 nnoremap <leader>rm :action ExtractMethod<CR>
+nnoremap <leader>rd :action SafeDelete<CR>
 nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
 
 vmap <leader>rp :action IntroduceParameter<CR>

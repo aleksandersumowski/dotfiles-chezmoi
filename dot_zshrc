@@ -165,3 +165,5 @@ eval "$($BREW_PREFIX/mise activate zsh)"
 bindkey '^g' fzf-git-checkout
 bindkey '^b' fzf-git-branch
 bindkey '^x' forward-word
+bindkey '^a' backward-word
+bindkey '^s' forward-char

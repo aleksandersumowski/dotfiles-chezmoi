@@ -167,3 +167,4 @@ bindkey '^b' fzf-git-branch
 bindkey '^x' forward-word
 bindkey '^a' backward-word
 bindkey '^s' forward-char
+export GIT_COMPLETION_CHECKOUT_NO_GUESS=true

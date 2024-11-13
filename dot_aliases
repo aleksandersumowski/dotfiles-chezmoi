@@ -6,6 +6,7 @@ alias gupm='git pull --rebase --autostash origin master && git rebase --autostas
 
 alias v='nvim'
 alias vim='nvim'
+alias vy='nvim +"set ft=yaml" +"lua require(\"jq\").run({commands = {{ command = \"yq\", filetype = \"yaml\"}}})"'
 
 alias lein="rlwrap lein"
 

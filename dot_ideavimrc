@@ -132,3 +132,5 @@ nnoremap <leader>ls :Action FileStructurePopup<CR>
 nnoremap <leader>lr :action RenameElement<CR>
 nnoremap crn        :action RenameElement<CR>
 nnoremap <leader>fo :action RecentFiles<CR>
+nnoremap ]d :action NextOccurence<CR>
+nnoremap [d :action PreviousOccurence<CR>

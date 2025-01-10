@@ -31,6 +31,7 @@ return {
       "grapp-dev/nui-components.nvim",
     },
   },
+  { "CarloWood/vim-plugin-AnsiEsc" },
   {
     "ksaito422/remote-line.nvim",
     config = function() require("remote-line").setup() end,
@@ -42,13 +43,49 @@ return {
   },
   {
     "johmsalas/text-case.nvim",
-    init = function() require("textcase").setup {} end,
+    config = function()
+      require("textcase").setup {}
+      require("telescope").load_extension "textcase"
+      vim.api.nvim_set_keymap("n", "ga.", "<cmd>TextCaseOpenTelescope<CR>", { desc = "Telescope" })
+      vim.api.nvim_set_keymap("v", "ga.", "<cmd>TextCaseOpenTelescope<CR>", { desc = "Telescope" })
+    end,
   },
+  { "akinsho/git-conflict.nvim", version = "*", config = true },
 
   -- config overrides
   {
     "nvim-neo-tree/neo-tree.nvim",
     keys = { { "<leader>e", "<cmd>Neotree focus reveal_force_cwd<cr>", desc = "" } },
+  },
+  { "rafikdraoui/jj-diffconflicts" },
+  {
+    "mrjones2014/smart-splits.nvim",
+    lazy = true,
+    event = "wezterm" and "VeryLazy", -- load early if mux detected
+    specs = {
+      {
+        "AstroNvim/astrocore",
+        opts = function(_, opts)
+          local maps = opts.mappings
+          maps.n["<<leader>-H>"] =
+            { function() require("smart-splits").move_cursor_left() end, desc = "Move to left split" }
+          maps.n["<<leader>-J>"] =
+            { function() require("smart-splits").move_cursor_down() end, desc = "Move to below split" }
+          maps.n["<<leader>-K>"] =
+            { function() require("smart-splits").move_cursor_up() end, desc = "Move to above split" }
+          maps.n["<<leader>-L>"] =
+            { function() require("smart-splits").move_cursor_right() end, desc = "Move to right split" }
+          maps.n["<<leader>-Up>"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" }
+          maps.n["<<leader>-Down>"] =
+            { function() require("smart-splits").resize_down() end, desc = "Resize split down" }
+          maps.n["<<leader>-Left>"] =
+            { function() require("smart-splits").resize_left() end, desc = "Resize split left" }
+          maps.n["<<leader>-Right>"] =
+            { function() require("smart-splits").resize_right() end, desc = "Resize split right" }
+        end,
+      },
+    },
+    opts = { ignored_filetypes = { "nofile", "quickfix", "qf", "prompt" }, ignored_buftypes = { "nofile" } },
   },
   {
     "folke/flash.nvim",

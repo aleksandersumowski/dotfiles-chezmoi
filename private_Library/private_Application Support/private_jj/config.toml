@@ -1,0 +1,15 @@
+[user]
+name = "Aleksander Sumowski"
+email = "asumowski@wayfair.com"
+
+[merge-tools.diffconflicts]
+program = "nvim"
+merge-args = ["-c", "JJDiffConflicts!", "$output", "$base", "$left", "$right"]
+merge-tool-edits-conflict-markers = true
+
+[ui]
+default-command = "log"
+pager = "delta"
+
+[ui.diff]
+format = "git"

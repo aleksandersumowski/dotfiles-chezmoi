@@ -6,10 +6,11 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.clojure" },
+  -- { import = "astrocommunity.pack.clojure" },
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.helm" },
+  { import = "astrocommunity.pack.jj" },
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.search.nvim-spectre" },
   { import = "astrocommunity.motion.mini-surround" },

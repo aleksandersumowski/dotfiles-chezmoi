@@ -10,6 +10,7 @@
 
 # Sets sane Zsh built-in environment options.
 zmodule environment
+zmodule joke/zim-mise
 # Provides handy git aliases and functions.
 # zmodule git
 # Applies correct bindkeys for input events.

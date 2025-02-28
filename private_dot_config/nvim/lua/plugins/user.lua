@@ -88,6 +88,17 @@ return {
     opts = { ignored_filetypes = { "nofile", "quickfix", "qf", "prompt" }, ignored_buftypes = { "nofile" } },
   },
   {
+    "Dronakurl/injectme.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+    -- This is for lazy load and more performance on startup only
+    cmd = { "InjectmeToggle", "InjectmeSave", "InjectmeInfo", "InjectmeLeave" },
+  },
+
+  {
     "folke/flash.nvim",
     opts = {
       modes = {

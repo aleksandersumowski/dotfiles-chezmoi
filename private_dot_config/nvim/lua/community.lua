@@ -16,8 +16,6 @@ return {
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.indent.mini-indentscope" },
-  { import = "astrocommunity/code-runner/sniprun" },
-  -- {import = "astrocommunity.motion.leap-nvim"},
-  -- {import = "astrocommunity.motion.flit-nvim"}
+  -- { import = "astrocommunity/code-runner/sniprun" },
   -- import/override with your plugins folder
 }

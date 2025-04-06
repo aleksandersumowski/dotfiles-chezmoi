@@ -13,3 +13,6 @@ pager = "delta"
 
 [ui.diff]
 format = "git"
+
+[git]
+subprocess = false

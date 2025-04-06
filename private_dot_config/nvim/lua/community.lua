@@ -5,9 +5,11 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+  { import = "astrocommunity.fuzzy-finder.telescope-nvim" },
   { import = "astrocommunity.pack.lua" },
   -- { import = "astrocommunity.pack.clojure" },
   { import = "astrocommunity.pack.java" },
+  { import = "astrocommunity.pack.chezmoi" },
   { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.helm" },
   { import = "astrocommunity.pack.jj" },

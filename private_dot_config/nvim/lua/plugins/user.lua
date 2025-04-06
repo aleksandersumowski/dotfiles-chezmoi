@@ -38,15 +38,6 @@ return {
   },
   { "CarloWood/vim-plugin-AnsiEsc" },
   {
-    "ksaito422/remote-line.nvim",
-    config = function() require("remote-line").setup() end,
-  },
-  {
-    "xvzc/chezmoi.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function() require("chezmoi").setup {} end,
-  },
-  {
     "johmsalas/text-case.nvim",
     config = function()
       require("textcase").setup {}
@@ -57,12 +48,13 @@ return {
   },
   { "akinsho/git-conflict.nvim", version = "*", config = true },
 
+  { "rafikdraoui/jj-diffconflicts" },
+
   -- config overrides
   {
     "nvim-neo-tree/neo-tree.nvim",
     keys = { { "<leader>e", "<cmd>Neotree focus reveal_force_cwd<cr>", desc = "" } },
   },
-  { "rafikdraoui/jj-diffconflicts" },
   {
     "mrjones2014/smart-splits.nvim",
     lazy = true,
@@ -93,17 +85,6 @@ return {
     opts = { ignored_filetypes = { "nofile", "quickfix", "qf", "prompt" }, ignored_buftypes = { "nofile" } },
   },
   {
-    "Dronakurl/injectme.nvim",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    -- This is for lazy load and more performance on startup only
-    cmd = { "InjectmeToggle", "InjectmeSave", "InjectmeInfo", "InjectmeLeave" },
-  },
-
-  {
     "folke/flash.nvim",
     opts = {
       modes = {
@@ -114,14 +95,14 @@ return {
     },
   },
   -- keep
-  {
-    "echasnovski/mini.indentscope",
-    event = "User AstroFile",
-    opts = {
-      options = {
-        border = "top",
-        try_as_border = true,
-      },
-    },
-  },
+  -- {
+  --   "echasnovski/mini.indentscope",
+  --   event = "User AstroFile",
+  --   opts = {
+  --     options = {
+  --       border = "top",
+  --       try_as_border = true,
+  --     },
+  --   },
+  -- },
 }

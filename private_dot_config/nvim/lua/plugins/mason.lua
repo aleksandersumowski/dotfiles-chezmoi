@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Mason
 
 ---@type LazySpec
@@ -24,10 +22,10 @@ return {
         "tree-sitter-cli",
 
         -- mine
-				"helm_ls",
-				"terraformls",
-				"clojure_lsp",
-				"jqls",
+        "helm-ls",
+        "terraform-ls",
+        "clojure-lsp",
+        "jq-lsp",
       },
     },
   },

@@ -20,7 +20,6 @@ tap "openresty/brew"
 tap "romkatv/gitstatus"
 tap "romkatv/powerlevel10k"
 tap "wez/wezterm"
-brew "amazon-ecs-cli"
 brew "atuin"
 brew "bandwhich"
 brew "bat"
@@ -31,9 +30,7 @@ brew "busted"
 brew "bzip2"
 brew "cargo-binstall"
 brew "chezmoi"
-brew "consul-template"
 brew "copilot"
-brew "ctags"
 brew "defaultbrowser"
 brew "diff-so-fancy"
 brew "difftastic"
@@ -43,10 +40,8 @@ brew "fd"
 brew "fdupes"
 brew "func-e"
 brew "fzf"
-brew "fzy"
 brew "git"
 brew "git-delta"
-brew "git-lfs"
 brew "gitui"
 brew "glow"
 brew "gnu-sed"
@@ -66,7 +61,6 @@ brew "kubernetes-cli"
 brew "kubie"
 brew "lazydocker"
 brew "xz"
-brew "python@3.13"
 brew "llm"
 brew "lnav"
 brew "luajit"
@@ -119,12 +113,9 @@ brew "clojure-lsp/brew/clojure-lsp-native"
 brew "fujiwara/tap/kinesis-tailf"
 brew "jesseduffield/lazygit/lazygit"
 brew "romkatv/gitstatus/gitstatus"
-cask "alt-tab"
-cask "coscreen"
 cask "ghostty"
 cask "gimp"
 cask "gitter"
-cask "little-snitch"
 cask "obsidian"
 cask "rectangle"
 cask "shortcat"
@@ -137,14 +128,4 @@ cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "CCMenu", id: 603117688
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Keynote", id: 409183694
-mas "Microsoft Remote Desktop", id: 1295203466
-mas "Numbers", id: 409203825
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Pages", id: 409201541
 mas "Windows App", id: 1295203466

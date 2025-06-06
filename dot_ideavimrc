@@ -37,7 +37,7 @@ nnoremap <leader>y :action PasteMultiple<CR>
 " Comment
 nnoremap <leader>cc :action CommentByLineComment<CR>
 vmap <leader>cc :action CommentByLineComment<CR>
-vmap <leader>cb :action CommentByBlockComment<CR>
+vmap <leader>cr :action CommentByBlockComment<CR>
 
 " Menus
 nnoremap <leader>e :action ActivateProjectToolWindow<CR>
@@ -128,7 +128,10 @@ noremap <leader>vr :source ~/.ideavimrc<CR>
 
 
 " AstroNvim mappings
+nnoremap <leader>ss :Action FileStructurePopup<CR>
 nnoremap <leader>ls :Action FileStructurePopup<CR>
 nnoremap <leader>lr :action RenameElement<CR>
 nnoremap crn        :action RenameElement<CR>
 nnoremap <leader>fo :action RecentFiles<CR>
+nnoremap ]d :action NextOccurence<CR>
+nnoremap [d :action PreviousOccurence<CR>

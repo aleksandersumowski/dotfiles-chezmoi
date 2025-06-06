@@ -20,7 +20,7 @@ return {
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-          -- "go",
+          "lua",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           "java",
@@ -49,6 +49,28 @@ return {
         yamlls = {
           config = {
             schemas = {},
+          },
+        },
+      },
+      lua_ls = {
+        settings = {
+          format = {
+            enable = true,
+            defaultConfig = {
+              indent_style = "space",
+              indent_size = "2",
+              max_line_length = "150",
+            },
+          },
+          Lua = {
+            format = {
+              enable = true,
+              defaultConfig = {
+                indent_style = "space",
+                indent_size = "2",
+                max_line_length = "150",
+              },
+            },
           },
         },
       },

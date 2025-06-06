@@ -16,5 +16,6 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 alias more='bat --theme=Nord'
 alias ls='eza'
 alias kg='kubectl get'
+alias kgy='kubectl get -o yaml'
 alias kgpy='kubectl get pods -o yaml'
 alias e='emacsclient --create-frame --alternate-editor=""'

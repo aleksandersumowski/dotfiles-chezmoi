@@ -1,6 +1,5 @@
 [tools]
 java = "temurin-21"
 node = "20"
-go = "latest"
 lua = "5.4"
-kubectl = "1.30"
+kubectl = "1.32"

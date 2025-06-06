@@ -2,3 +2,7 @@
 
 # Added by Toolbox App
 export PATH="$PATH:/Users/aleksandersumowski/Library/Application Support/JetBrains/Toolbox/scripts"
+
+# Added by Toolbox App
+export PATH="$PATH:/usr/local/bin"
+

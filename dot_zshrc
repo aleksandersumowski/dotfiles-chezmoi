@@ -1,5 +1,6 @@
-export XDG_CONFIG_HOME=$HOME/.cache
-export ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/ohmyzsh"
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME="$HOME/.cache"
+export ZSH_CACHE_DIR="$XDG_CACHE_HOME/ohmyzsh"
 
 # Remove path separator from WORDCHARS.
 WORDCHARS=${WORDCHARS//[\/]}
@@ -64,56 +65,21 @@ function source_if_exists {
 }
 setopt HIST_IGNORE_ALL_DUPS HIST_SAVE_NO_DUPS NOTIFY
 unsetopt beep
-plugins=(
-        # fzf
-        # git
-        # kubectl
-        # zoxide
-        # zsh-vi-mode
-        # zsh-autosuggestions
-        # gcloud
-        # chezmoi
-        # brew
-        # last-working-dir
-        # docker
-        # helm
-        # terraform
-        # vi-mode
-)
 # extra config
 
-export HISTFILE="$HOME/.zsh_history"
-export HISTSIZE=1000000000
-export SAVEHIST=1000000000
 setopt EXTENDED_HISTORY
 
-if test -f "/usr/local/bin/nvim"; then
-    export EDITOR="/usr/local/bin/nvim"
-  else
-    export EDITOR="/opt/homebrew/bin/nvim"
-fi
-export GIT_EDITOR=$EDITOR
 export BROWSER="firefox"
-export GH_BROWSER="chrome"
-export TMUX_PLUGIN_MANAGER_HOME="${HOME}/.tmux/plugins/tpm"
+export EDITOR="/opt/homebrew/bin/nvim"
+export GIT_EDITOR=$EDITOR
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=1000000000
 export KEYTIMEOUT=1
-export AWS_REGION=eu-west-1
 export LANG="en_US.UTF-8"
-if [[ $OSTYPE == darwin* && $CPUTYPE == arm64 ]]; then
-    export BREW_PREFIX="/opt/homebrew/bin"
-else
-    export BREW_PREFIX="/usr/local/bin"
-fi
-export PATH="$PATH:$BREW_PREFIX"
-export ZVM_VI_SURROUND_BINDKEY=s-prefix
+export SAVEHIST=1000000000
 export ZVM_VI_EDITOR=$EDITOR
-export XDG_CONFIG_HOME=$HOME/.config
+export ZVM_VI_SURROUND_BINDKEY=s-prefix
 
-bindkey -v
-
-bindkey '^a' beginning-of-line
-bindkey '^e' end-of-line
-bindkey '^?' backward-delete-char
 
 fzf-git-branch() {
     git rev-parse HEAD > /dev/null 2>&1 || return
@@ -147,29 +113,24 @@ fzf-git-checkout() {
 }
 
 source "${HOME}/.aliases"
-source "${HOME}/.paths"
 zle -N fzf-git-checkout
 zle -N fzf-git-branch
 
 zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')
 zvm_after_init_commands+=('eval "$(atuin init zsh --disable-up-arrow)"')
 
-eval "$($BREW_PREFIX/mise activate zsh)"
+eval "$($HOMEBREW_PREFIX/bin/mise activate zsh)"
 
-bindkey '^g' fzf-git-checkout
+
+
+bindkey -v
+bindkey '^?' backward-delete-char
+bindkey '^a' beginning-of-line
 bindkey '^b' fzf-git-branch
-bindkey '^x' forward-word
-bindkey '^a' backward-word
+bindkey '^e' end-of-line
+bindkey '^g' fzf-git-checkout
 bindkey '^s' forward-char
-export GIT_COMPLETION_CHECKOUT_NO_GUESS=true
+bindkey '^x' forward-word
+
 export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-eval "$(starship init zsh)"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/tools/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/tools/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '$HOME/tools/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/tools/google-cloud-sdk/completion.zsh.inc'; fi
-
-export CLOUDSDK_PYTHON="$HOME/.local/share/mise/installs/python/3.12/bin/python"
 

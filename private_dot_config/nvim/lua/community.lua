@@ -13,6 +13,7 @@ return {
   { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.helm" },
   { import = "astrocommunity.pack.jj" },
+  { import = "astrocommunity.pack.nix" },
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.search.nvim-spectre" },
   { import = "astrocommunity.motion.mini-surround" },

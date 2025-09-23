@@ -1,1 +1,0 @@
-export PATH="$PATH:$HOME/.config/emacs/bin/:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.poetry/bin:$HOME/bin:$HOME/go/bin:$HOME/google-cloud-sdk/bin:/Applications/Firefox Developer Edition.app/Contents/MacOS/:/usr/local/bin:/usr/local/sbin"

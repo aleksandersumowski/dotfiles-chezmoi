@@ -16,13 +16,15 @@ return {
       require("schema-companion").setup {
         -- if you have telescope you can register the extension
         enable_telescope = true,
-        matchers = {
-          require("schema-companion.matchers.kubernetes").setup { version = "master" },
-        },
-        schemas = {
-          {
-            name = "Kubernetes v1.29",
-            uri = "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.29.7-standalone-strict/all.json",
+        sources = {
+          -- your sources for the language server
+          require("schema-companion").sources.matchers.kubernetes.setup { version = "master" },
+          require("schema-companion").sources.lsp.setup(),
+          require("schema-companion").sources.schemas.setup {
+            {
+              name = "Kubernetes master",
+              uri = "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master-standalone-strict/all.json",
+            },
           },
         },
       }

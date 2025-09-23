@@ -1,6 +1,10 @@
 [user]
   name = Aleksander Sumowski
+{{- if eq .chezmoi.hostname "ALT03642" -}}
+  email = asumowski@wayfair.com
+{{- else }}
   email = github@sumowski.pl
+{{- end}}
   user = aleksandersumowski
 
 [core]

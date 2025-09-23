@@ -2,7 +2,8 @@ local wezterm = require("wezterm")
 return {
 	color_scheme = "nord",
 	-- window_decorations = "NONE", -- conflicts with rectangle
-	font = wezterm.font("JetBrains Mono"),
+	-- font = wezterm.font("JetBrains Mono"),
+	font = wezterm.font("NotoSansM Nerd Font Mono"),
 	font_size = 12.0,
 	leader = { key = "a", mods = "CTRL" },
 	hide_tab_bar_if_only_one_tab = true,

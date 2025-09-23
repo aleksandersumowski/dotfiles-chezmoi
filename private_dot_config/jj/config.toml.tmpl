@@ -1,6 +1,10 @@
 [user]
 name = "Aleksander Sumowski"
+{{- if eq .chezmoi.hostname "ALT03642" -}}
 email = "asumowski@wayfair.com"
+{{- else }}
+email = "github@sumowski.pl"
+{{- end}}
 
 [merge-tools.diffconflicts]
 program = "nvim"
@@ -10,9 +14,7 @@ merge-tool-edits-conflict-markers = true
 [ui]
 default-command = "log"
 pager = "delta"
+diff-formatter = ":git"
 
-[ui.diff]
-format = "git"
-
-[git]
-subprocess = false
+[aliases]
+fetch = ["git", "fetch"]

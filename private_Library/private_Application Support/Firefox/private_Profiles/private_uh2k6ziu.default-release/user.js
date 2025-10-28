@@ -227,7 +227,8 @@ user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("dom.security.https_only_mode", true);
 user_pref("dom.security.https_only_mode_error_page_user_suggestions", true);
-user_pref("network.trr.uri", "https://dns.dnswarden.com/00000000000000000000048"); // Hagezi Light + TIF
+user_pref("network.trr.uri", "https://firefox.dns.nextdns.io/");
+// user_pref("network.trr.uri", "https://dns.dnswarden.com/00000000000000000000048"); // Hagezi Light + TIF
 user_pref("network.trr.mode", 3);
 user_pref("network.trr.max-fails", 5);
 // PREF: hide site shortcut thumbnails on New Tab page

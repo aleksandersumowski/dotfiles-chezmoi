@@ -3,5 +3,6 @@ export HOMEBREW_PREFIX="/opt/homebrew";
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
 export HOMEBREW_REPOSITORY="/opt/homebrew";
 fpath[1,0]="/opt/homebrew/share/zsh/site-functions";
+export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
 
 export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$HOME/.radicle/bin:$HOME/.config/emacs/bin/:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/bin:$HOME/go/bin:/usr/local/bin:/usr/local/sbin:$PATH"
